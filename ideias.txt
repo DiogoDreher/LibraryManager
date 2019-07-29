@@ -1,3 +1,0 @@
-criar tabela nova para emprestimo (cliente, funcionario e livro)
-2 janelas novas - 1 formulario para fazer emprestio e 1 para listar emprestimos e fazer devolução
-tentar adicionar "atraso" apos um mes de emprestimo
