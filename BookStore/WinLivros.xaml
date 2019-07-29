@@ -1,0 +1,70 @@
+﻿<Window x:Class="BookStore.WinLivros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStore"
+        mc:Ignorable="d"
+        Title="Livros" Height="540" Width="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <StackPanel HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto">
+
+        <ToolBar HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="-8,0">
+            <Button  x:Name="btnAddLivro" Click="BtnAddLivro_Click" Margin="0,0,0,-5" Width="120" Height="94">
+                <StackPanel>
+                    <TextBlock x:Name="addContent" TextAlignment="Center" FontFamily="MS Reference Sans Serif" FontSize="20" FontWeight="Bold" Text="Adicionar&#10;Livro"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button  x:Name="btnLstLivros" Click="BtnLstLivros_Click" Margin="0,0,0,-5" Width="100" Height="94">
+                <StackPanel>
+                    <TextBlock TextAlignment="Center" FontFamily="MS Reference Sans Serif" FontSize="20" FontWeight="Bold" Text="Listar&#10;Livros"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button  x:Name="btnVoltar" Click="BtnVoltar_Click" Margin="0,0,0,-5" Width="100" Height="94">
+                <StackPanel>
+                    <TextBlock TextAlignment="Center" FontFamily="MS Reference Sans Serif" FontSize="20" FontWeight="Bold" Text="Voltar"></TextBlock>
+                </StackPanel>
+            </Button>
+        </ToolBar>
+        <Grid HorizontalAlignment="Stretch" Height="315" VerticalAlignment="Stretch" Width="auto">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Adicionar:" VerticalAlignment="Top" FontFamily="MS Reference Sans Serif" FontSize="20" FontWeight="Bold"/>
+            <Label Content="Nome:" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.254,0.471"/>
+            <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="100,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350"/>
+            <Label Content="Autor:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtAutor" HorizontalAlignment="Left" Height="23" Margin="100,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350"/>
+            <Label Content="Genero:" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtGen" HorizontalAlignment="Left" Height="23" Margin="100,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+            <Label Content="Editora:" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtEditora" HorizontalAlignment="Left" Height="23" Margin="100,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+            <Label Content="Ano:" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtAno" HorizontalAlignment="Left" Height="23" Margin="100,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>            
+            <TextBlock HorizontalAlignment="Left" Margin="10,261,0,0" TextWrapping="Wrap" Text="Listar:" VerticalAlignment="Top" FontFamily="MS Reference Sans Serif" FontSize="20" FontWeight="Bold"/>
+            <CheckBox x:Name="chkDisponivel" IsChecked="True" Content="Disponiveis" Margin="10,290,676,0"/>
+        </Grid>
+        <ToolBar HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="-8,0" RenderTransformOrigin="0.5,0.48">
+            <ToolBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180"/>
+                    <TranslateTransform Y="4.27"/>
+                </TransformGroup>
+            </ToolBar.RenderTransform>
+            <Button  x:Name="btnSair" Click="BtnSair_Click" Margin="0,-2" Width="100" Height="94" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel>
+                    <TextBlock TextAlignment="Center" FontFamily="MS Reference Sans Serif" FontSize="20" FontWeight="Bold" Text="Sair"></TextBlock>
+                </StackPanel>
+            </Button>
+        </ToolBar>
+
+
+
+    </StackPanel>
+</Window>
